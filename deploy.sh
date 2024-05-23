@@ -1,4 +1,4 @@
-source myenv/bin/activate
+source .venv/bin/activate
 
 cd app
 
