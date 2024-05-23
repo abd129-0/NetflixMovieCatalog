@@ -68,5 +68,6 @@ def status():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080, host='0.0.0.0')
+    context = ('/home/ubuntu/cert/selfsigned.crt', '/home/ubuntu/cert/selfsigned.key')
+    app.run(debug=True, port=443, host='0.0.0.0', ssl_context=context)
 
