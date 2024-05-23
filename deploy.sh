@@ -4,5 +4,5 @@ source .venv/bin/activate
 
 cd app
 
-sudo python app.py
+python app.py
 
