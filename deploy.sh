@@ -6,3 +6,5 @@ cd app
 
 python app.py
 
+sudo fuser -k 8080/tcp
+
