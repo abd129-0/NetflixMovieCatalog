@@ -1,3 +1,5 @@
+pwd
+
 source .venv/bin/activate
 
 cd app
