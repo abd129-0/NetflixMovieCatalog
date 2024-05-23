@@ -22,9 +22,13 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > mykey.pem
           chmod 400 mykey.pem
           # Copy the files from the current wrok dir into the EC2 instance, under `~/app`.
+          
+          #add app dir in ec2
           ssh -i mykey.pem -o StrictHostKeyChecking=no ubuntu@$EC2_PUBLIC_IP "mkdir -p ~/app"
+          
           rsync -avz --exclude 'mykey.pem' -e "ssh -i mykey.pem -o StrictHostKeyChecking=no" . ubuntu@$EC2_PUBLIC_IP:~/app
-          scp -i mykey.pem  -o StrictHostKeyChecking=no -r * ubuntu@$EC2_PUBLIC_IP:~/app
+          
+          #scp -i mykey.pem  -o StrictHostKeyChecking=no -r * ubuntu@$EC2_PUBLIC_IP:~/app
           
           # Connect to your EC2 instance and execute the `deploy.sh` script (this script is part of the repo files). 
           # You need to implement the `deploy.sh` script yourself.
