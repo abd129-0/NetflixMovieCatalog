@@ -1,3 +1,6 @@
-#!/bin/bash
+source myenv/bin/activate
 
-# TODO your deploy script implementation...
+cd app
+
+sudo venv/bin/python app.py
+
