@@ -1,3 +1,5 @@
+ls
+
 source .venv/bin/activate
 
 cd app
