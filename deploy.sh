@@ -2,7 +2,8 @@ source venv/bin/activate
 
 cd app
 
-python3 app.py
+sudo systemctl enable uwsgi-flask
+sudo systemctl start uwsgi-flask
 
 
 
